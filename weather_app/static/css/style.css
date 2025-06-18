@@ -1,0 +1,30 @@
+body {
+    background: linear-gradient(to right, #e0f7fa, #80deea);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    border: none;
+}
+
+.card-header, .btn-primary {
+    background-color: #1976d2 !important;
+}
+
+#temp {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#city {
+    font-size: 2rem;
+    color: #444;
+}
+
+.card-footer a {
+    color: #2196f3;
+}
+
+.card-footer a:hover {
+    text-decoration: underline;
+}

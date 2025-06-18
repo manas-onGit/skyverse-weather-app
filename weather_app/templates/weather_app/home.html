@@ -1,0 +1,59 @@
+{% extends 'weather_app/base.html' %}
+{% load static %}
+
+{% block title %}Home | SkyVerse{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card shadow-lg rounded-4">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">SkyVerse Weather</h4>
+        </div>
+
+        <div class="card-body">
+            <!-- Search Bar -->
+            <div class="input-group mb-4">
+                <input list="citySuggestions" type="text" id="cityInput" class="form-control" placeholder="Enter city name...">
+                <datalist id="citySuggestions"></datalist>
+                <button class="btn btn-primary" onclick="w()">
+                    <img src="{% static 'img/search.png' %}" height="18px" alt="Search">
+                </button>
+            </div>
+
+            <!-- Weather Info -->
+            <div class="text-center">
+                <img src="{% static 'img/clouds.png' %}" height="100px" alt="Weather Icon" id="weatherIcon">
+                <h1 id="temp">--℃</h1>
+                <h2 id="city">--</h2>
+            </div>
+
+            <!-- Weather Stats -->
+            <div class="row text-center mt-4">
+                <div class="col-md-6 mb-3">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/humidity.png' %}" alt="Humidity" height="40px" class="me-2">
+                        <div>
+                            <h5 id="humidity">--%</h5>
+                            <small>Humidity</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/wind.png' %}" alt="Wind Speed" height="40px" class="me-2">
+                        <div>
+                            <h5 id="wind">-- km/h</h5>
+                            <small>Wind Speed</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional card footer -->
+        <div class="card-footer text-center text-muted">
+            SkyVerse © 2025 
+        </div>
+    </div>
+</div>
+{% endblock %}
